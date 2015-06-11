@@ -31,6 +31,8 @@ var model = {
 			var index = locations.indexOf(guess);
 			if (index >= 0){
 				ship.hits[index] = "hit";
+				view.displayHit(guess);
+				view.displayMessage("Direct Hit")
 				if (this.isSunk(ship)){
 					view.displayMessage("you sank")
 					this.shipsSunk++;
